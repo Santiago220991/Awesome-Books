@@ -29,6 +29,23 @@ header.active {
 
 .logo {
   margin-left: 50px;
+  animation-name: growth;
+  animation-duration: 3s;
+  font-size: 24px;
+}
+
+@keyframes growth {
+  0% {
+    transform:scale(1)
+  }
+
+  50% {
+    transform:scale(1.2)
+  }
+
+100% {
+  transform:scale(1)
+}
 }
 
 .ul-nav {
