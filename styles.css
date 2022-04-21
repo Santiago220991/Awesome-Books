@@ -25,10 +25,11 @@ header.active {
   width: 90%;
   margin: 12px;
   border: solid 2px black;
+  column-gap: 20px;
 }
 
 .logo {
-  margin-left: 50px;
+  margin-left: 5%;
   animation-name: growth;
   animation-duration: 3s;
   font-size: 24px;
@@ -50,9 +51,10 @@ header.active {
 
 .ul-nav {
   display: flex;
-  margin-right: 50px;
+  margin-right: 8%;
   justify-content: space-between;
   column-gap: 10px;
+  padding-left: 0px;
 }
 
 .nav-items2 {
@@ -138,12 +140,24 @@ header.active {
   display: block;
 }
 
+.msgc{
+  color: green;
+  display: none;
+}
+
+.msgc.active{
+  display: block;
+  
+}
+
 .contact {
   display: none;
+  
 }
 
 .contact.active {
   display: block;
+  margin-top: 50px;
 }
 
 .contact h1 {
@@ -155,6 +169,8 @@ header.active {
   margin: 12px;
   border: solid 2px black;
   justify-self: flex-end;
+  position: absolute;
+  bottom: 0px;
 }
 
 .copyright p {
