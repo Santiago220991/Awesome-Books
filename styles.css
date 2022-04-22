@@ -2,7 +2,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
 }
 
 .list-nav {
@@ -76,6 +75,9 @@ header.active {
   flex-direction: column;
   width: 80%;
   display: flex;
+  position: relative;
+  margin-bottom: 24px;
+  min-height: 340px;
 }
 
 .book-shelf.active {
@@ -108,9 +110,11 @@ header.active {
   flex-direction: column;
   max-width: 300px;
   gap: 12px;
-  margin-top: 24px;
+  margin-top: 100px;
   display: none;
   align-items: center;
+  margin-bottom: 100px;
+  min-height: 250px;
 }
 
 .user-input.active {
@@ -151,13 +155,13 @@ header.active {
 }
 
 .contact {
+  margin-top: 100px;
   display: none;
-  
+  margin-bottom: 160px;
 }
 
 .contact.active {
   display: block;
-  margin-top: 50px;
 }
 
 .contact h1 {
@@ -169,8 +173,7 @@ header.active {
   margin: 12px;
   border: solid 2px black;
   justify-self: flex-end;
-  position: absolute;
-  bottom: 0px;
+  margin-top: auto;
 }
 
 .copyright p {

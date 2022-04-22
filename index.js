@@ -36,7 +36,7 @@ const shelfbook = document.querySelector('.book-shelf');
 const addbtn = document.querySelector('.add-btn');
 const msga = document.querySelector('.msga');
 const msgb = document.querySelector('.msgb');
-const msgc = document.querySelector(".msgc")
+const msgc = document.querySelector('.msgc');
 const listtitle = document.querySelector('header');
 const userinput = document.querySelector('.user-input');
 const contact = document.querySelector('.contact');
@@ -105,26 +105,31 @@ if (books.book !== '') {
   removeBtn.forEach((element) => {
     element.addEventListener('click', () => {
       const parent = element.parentNode;
-      books.remove(parent)
+      books.remove(parent);
     });
   });
 }
 
-const hidemessage = ()=>{
+function hidemsga() {
   msga.classList.remove('active');
+};
+function hidemsgb() {
   msgb.classList.remove('active');
+};
+function hidemsgc() {
   msgc.classList.remove('active');
-}
+};
+
 
 addbtn.addEventListener('click', () => {
   if (title.value === '' || author.value === '') {
     msga.classList.add('active');
-    setInterval(hidemessage, 2000);
-  } else if (books.book.filter((element) => element.name === title.value).length !== 0) { msgb.classList.add('active'); setInterval(hidemessage, 2000); } else {
+    setTimeout(hidemsga, 2000);
+  } else if (books.book.filter((element) => element.name === title.value).length !== 0) { msgb.classList.add('active'); setTimeout(hidemsgb, 2000); } else {
     msga.classList.remove('active');
     msgb.classList.remove('active');
-    msgc.classList.add("active")
-    setInterval(hidemessage, 2000);
+    msgc.classList.add('active');
+    setTimeout(hidemsgc, 2000);
     books.add(title.value, author.value, shelfbook);
     const removeBtn = document.querySelectorAll('.remove-btn');
     removeBtn.forEach((element) => {
