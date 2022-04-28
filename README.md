@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Aweasome-books-
+# Aweasome-books
 
 This is our Awesome books page, a basic website that allows users to add/remove books from a list.
 
