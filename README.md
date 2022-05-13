@@ -6,7 +6,9 @@ This is our Awesome books page, a basic website that allows users to add/remove 
 
 ## Built With
 
-- CSS/HTML & Javascript
+- CSS
+- HTML 
+- JavaScript
 
 ## Live demo
 
