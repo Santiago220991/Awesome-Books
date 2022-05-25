@@ -36,3 +36,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - For Microverse curriculum projects
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
