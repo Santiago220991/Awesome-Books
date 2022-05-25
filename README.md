@@ -14,6 +14,16 @@ This is our Awesome books page, a basic website that allows users to add/remove 
 
 [Awesome Books Live Demo](https://santiago220991.github.io/Awesome-Books/)
 
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+### Setup
+
+- Clone the repository.
+- In your code editor terminal run `npm install` to install all the dependencies needed.
+- In your code editor open the index.html file using a live local server.
+
 ## Authors
 
 👤 **Santiago Cárdenas**
