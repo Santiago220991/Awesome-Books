@@ -1,3 +1,6 @@
+import bookstoraged from "./modules/bookstoraged.js";
+import currenttime from "./modules/time.js";
+
 class Bookshelf {
   constructor() {
     this.book = [];
@@ -30,6 +33,9 @@ if (bookstorage != null) {
   books.book = bookstorage;
 }
 
+
+setInterval(currenttime, 1000);
+
 const title = document.querySelector('#book');
 const author = document.querySelector('#author');
 const shelfbook = document.querySelector('.book-shelf');
@@ -41,22 +47,11 @@ const listtitle = document.querySelector('header');
 const userinput = document.querySelector('.user-input');
 const contact = document.querySelector('.contact');
 const navitems = document.querySelectorAll('.ul-nav li');
-const daytime = document.querySelector('.date p');
 const nav1 = document.querySelector('.nav-items1');
 const nav2 = document.querySelector('.nav-items2');
 const nav3 = document.querySelector('.nav-items3');
 
-function currenttime() {
-  const today = new Date();
-  const montharr = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-  let month = today.getMonth();
-  month = montharr[month];
-  const date = `${month} ${today.getDate()} ${today.getFullYear()}`;
-  const time = `${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`;
-  const dateTime = `${date} ${time}`;
-  daytime.textContent = dateTime;
-}
-setInterval(currenttime, 1000);
+
 
 navitems.forEach((element, index) => {
   element.addEventListener('click', () => {
@@ -88,27 +83,7 @@ navitems.forEach((element, index) => {
   });
 });
 
-if (books.book != null) {
-  books.book.forEach((element) => {
-    shelfbook.innerHTML += `
-    <div class="${element.name}">
-      <h2>"${element.name}" by ${element.owner}</h2>
-      <button class="remove-btn">
-        Remove
-      </button>
-    </div>`;
-  });
-}
-
-if (books.book !== '') {
-  const removeBtn = document.querySelectorAll('.remove-btn');
-  removeBtn.forEach((element) => {
-    element.addEventListener('click', () => {
-      const parent = element.parentNode;
-      books.remove(parent);
-    });
-  });
-}
+bookstoraged(books, shelfbook)
 
 function hidemsga() {
   msga.classList.remove('active');
@@ -125,9 +100,9 @@ addbtn.addEventListener('click', () => {
   if (title.value === '' || author.value === '') {
     msga.classList.add('active');
     setTimeout(hidemsga, 2000);
-  } else if (books.book.filter((element) => element.name === title.value).length !== 0) { msgb.classList.add('active'); setTimeout(hidemsgb, 2000); } else {
-    msga.classList.remove('active');
-    msgb.classList.remove('active');
+  } else if (books.book.filter((element) => element.name === title.value).length !== 0) { 
+    msgb.classList.add('active'); setTimeout(hidemsgb, 2000); } 
+  else {
     msgc.classList.add('active');
     setTimeout(hidemsgc, 2000);
     books.add(title.value, author.value, shelfbook);
