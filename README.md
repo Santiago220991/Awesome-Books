@@ -4,6 +4,8 @@
 
 This is our Awesome books page, a basic website that allows users to add/remove books from a list.
 
+![Awesome Books](https://user-images.githubusercontent.com/98363075/170794670-dfe85478-f260-41c3-b6c0-1d11f93054f4.png)
+
 ## Built With
 
 - CSS
