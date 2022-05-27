@@ -1,5 +1,5 @@
-const bookstoraged=(books, shelfbook)=>{
-if (books.book !== null) {
+const bookstoraged = (books, shelfbook) => {
+  if (books.book !== null) {
     books.book.forEach((element) => {
       shelfbook.innerHTML += `
       <div class="${element.name}">
@@ -14,8 +14,8 @@ if (books.book !== null) {
       element.addEventListener('click', () => {
         const parent = element.parentNode;
         books.remove(parent);
-        })
-    })
+      });
+    });
   }
-}
-  export default bookstoraged
+};
+export default bookstoraged;

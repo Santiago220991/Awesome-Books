@@ -1,5 +1,5 @@
-import bookstoraged from "./modules/bookstoraged.js";
-import currenttime from "./modules/time.js";
+import bookstoraged from './modules/bookstoraged.js';
+import currenttime from './modules/time.js';
 
 class Bookshelf {
   constructor() {
@@ -33,7 +33,6 @@ if (bookstorage != null) {
   books.book = bookstorage;
 }
 
-
 setInterval(currenttime, 1000);
 
 const title = document.querySelector('#book');
@@ -50,8 +49,6 @@ const navitems = document.querySelectorAll('.ul-nav li');
 const nav1 = document.querySelector('.nav-items1');
 const nav2 = document.querySelector('.nav-items2');
 const nav3 = document.querySelector('.nav-items3');
-
-
 
 navitems.forEach((element, index) => {
   element.addEventListener('click', () => {
@@ -83,26 +80,25 @@ navitems.forEach((element, index) => {
   });
 });
 
-bookstoraged(books, shelfbook)
+bookstoraged(books, shelfbook);
 
 function hidemsga() {
   msga.classList.remove('active');
-};
+}
 function hidemsgb() {
   msgb.classList.remove('active');
-};
+}
 function hidemsgc() {
   msgc.classList.remove('active');
-};
-
+}
 
 addbtn.addEventListener('click', () => {
   if (title.value === '' || author.value === '') {
     msga.classList.add('active');
     setTimeout(hidemsga, 2000);
-  } else if (books.book.filter((element) => element.name === title.value).length !== 0) { 
-    msgb.classList.add('active'); setTimeout(hidemsgb, 2000); } 
-  else {
+  } else if (books.book.filter((element) => element.name === title.value).length !== 0) {
+    msgb.classList.add('active'); setTimeout(hidemsgb, 2000);
+  } else {
     msgc.classList.add('active');
     setTimeout(hidemsgc, 2000);
     books.add(title.value, author.value, shelfbook);
