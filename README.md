@@ -33,7 +33,7 @@ To get a local copy up and running follow these simple example steps.
 
 - GitHub: [@githubhandle](https://github.com/Santiago220991)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/santiago-c%C3%A1rdenas-671043160/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/alexandersantiagocardenas/)
 
 👤 **Andrés Garzon**
 
