@@ -1,7 +1,7 @@
 import bookstoraged from './modules/bookstoraged.js';
 import currenttime from './modules/time.js';
-import { views } from './modules/views.js';
-import add_book from './modules/add_books.js';
+import views from './modules/views.js';
+import addBook from './modules/add_books.js';
 
 class Bookshelf {
   constructor() {
@@ -44,4 +44,4 @@ views();
 
 bookstoraged(books, shelfbook);
 
-add_book(books);
+addBook(books);

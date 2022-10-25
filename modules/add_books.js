@@ -1,4 +1,4 @@
-import { hidemsga, hidemsgb, hidemsgc } from './error_messages.js'
+import { hidemsga, hidemsgb, hidemsgc } from './error_messages.js';
 
 const addbtn = document.querySelector('.add-btn');
 const title = document.querySelector('#book');
@@ -8,8 +8,8 @@ const msgb = document.querySelector('.msgb');
 const msgc = document.querySelector('.msgc');
 const shelfbook = document.querySelector('.book-shelf');
 
-const add_book = (books) => {
-addbtn.addEventListener('click', () => {
+const addBook = (books) => {
+  addbtn.addEventListener('click', () => {
     if (title.value === '' || author.value === '') {
       msga.classList.add('active');
       setTimeout(hidemsga, 2000);
@@ -27,7 +27,7 @@ addbtn.addEventListener('click', () => {
         });
       });
     }
-  })
+  });
 };
 
-export default add_book;
+export default addBook;
